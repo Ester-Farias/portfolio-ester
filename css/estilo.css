@@ -1,0 +1,133 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: #4e3134;
+}
+
+html body{
+	scroll-behavior: smooth;
+	box-shadow: inset 0 0 9rem rgb(252, 197, 197);
+	color: rgba(0, 0, 0, 0.747);
+	background-color: #ffffff;	
+
+}
+
+ul,li{
+	list-style-type:none;
+}
+/* Estilizando o ScrollBar*/
+
+/* Trilho */
+::-webkit-scrollbar{
+	background: rgba(252, 197, 197, 0.473);
+	width: 0.9vw;
+}
+
+/* ScrollBar*/
+::-webkit-scrollbar-thumb{
+	background-color: #dc3545;
+	border-radius: 6px;
+}
+
+/* Estilização Navbar */
+
+.navbar-nav .nav-link {
+	padding: .25rem 0;
+	font-weight: 700;
+	color: rgba(216, 105, 105, 0.5);
+	background-color: transparent;
+	border-bottom: .25rem solid transparent;
+  }
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+	border-bottom-color: rgba(202, 48, 48, 0.25);
+	color: #dc3545;
+  }
+  
+  .navbar-nav .nav-link + .nav-link {
+	margin-left: 1rem;
+  }
+  
+  .navbar-nav .active {
+	color: #ce6464;
+	border-bottom-color: #ac5353;
+  }
+
+
+/* Estilização Sobre */
+
+
+
+/* Projetos */
+.f-small{
+	font-size: 16px;
+}
+#projetos .text-justify{
+	text-align: justify;
+}
+a:link{
+	text-decoration: none;
+}
+.border-img{
+	border: 10px solid #dc3545;
+	border-radius: 15px;
+}
+/* Animação */
+[data-anime]{
+	transition: 1.5s;
+	opacity: 0;
+}
+
+[data-anime="right"]{
+	transform: translate3d(17% , 0, 0);
+	/*1. Eixo X | 2. Eixo Y | 3. Eixo Z (Profundidade)*/	
+}
+[data-anime="left"]{
+	transform: translate3d(-30% , 0, 0);
+	/*1. Eixo X | 2. Eixo Y | 3. Eixo Z (Profundidade)*/	
+}
+[data-anime].animate{
+	opacity:1;
+	transform: translate3d(0,0,0);
+}
+
+
+/*Estilização contato */
+button .btn-icon .fa-brands .fa-linkedin-in{
+	color: #dc3545;
+}
+.btn-icon{
+	border: #dc3545 3px solid;
+	border-radius: 100%;
+	padding: 8px;
+	color: #dc3545;
+}
+.btn-icon:hover{
+	background-color: #dc3545;
+	color: #d4bfc1;
+}
+
+/* Estilização footer */
+.icon{
+	width: 30px;
+	height: 30px;
+}
+
+.footer-icon-animation{
+	color: #d4bfc1;
+	transform: translateY(0px);
+	animation: footer-icon 2s ease-in-out infinite;
+}
+@keyframes footer-icon{
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-5px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
