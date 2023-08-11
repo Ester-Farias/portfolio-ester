@@ -2,7 +2,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	color: #4e3134;
+	color: #532327;
 }
 
 html body{
@@ -13,9 +13,69 @@ html body{
 
 }
 
+
 ul,li{
 	list-style-type:none;
 }
+
+.bar{
+	margin-left: 15%;
+	counter-reset: step;
+	padding: 0;
+	counter-increment: step 2021;
+	width: 700px;
+}
+.bar li{
+	list-style-type: none;
+	float: left;
+	width: 20%;
+	position: relative;
+	text-align: center;
+	letter-spacing: 2px;
+}
+.bar li:before{
+	content: counter(step);
+	counter-increment: step;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border: 3px solid #df7777;
+	color: #f3b0b0;
+	font-weight: 700;
+	display: block;
+	text-align: center;
+	margin: 0 auto 10px auto;
+	border-radius: 50%;
+	background-color: #6c757d;
+	letter-spacing: 0px;
+}
+.bar li:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 7px;
+	background-color: #6c757d;
+	top: 23px;
+	left: -50%;
+	z-index: -1;
+}
+.bar li:first-child:after{
+	content: none;
+}
+.bar li.active{
+	color: #270206;
+}
+.bar li.active:before{
+	border-color: #dc3545;
+	background-color: #dc3545;
+}
+.bar li.active + li:after{
+	background-color: #dc3545;
+}
+
+
+
+
 /* Estilizando o ScrollBar*/
 
 /* Trilho */
@@ -67,6 +127,9 @@ ul,li{
 #projetos .text-justify{
 	text-align: justify;
 }
+.text-justify{
+	text-align: justify;
+}
 a:link{
 	text-decoration: none;
 }
@@ -74,6 +137,27 @@ a:link{
 	border: 10px solid #dc3545;
 	border-radius: 15px;
 }
+.progress{
+	width: 200px;
+}
+.progress-bar-formacao{
+	width: 575px;
+}
+.progress .progress-bar-formacao{
+	background-color: yellowgreen;
+	box-shadow: #532327 10px 10px 5px;
+}
+.cicle-time-line::after{
+	content:'';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #dc3545;
+	padding: 0;
+	margin: 0;
+}
+
 /* Animação */
 [data-anime]{
 	transition: 1.5s;
@@ -93,15 +177,25 @@ a:link{
 	transform: translate3d(0,0,0);
 }
 
+/* Estilização Formação */
+#formacao{
+	background-image: url("../img/Union.svg");
+	background-repeat: no-repeat;
+	background-size:contain;
+}
 
 /*Estilização contato */
 button .btn-icon .fa-brands .fa-linkedin-in{
 	color: #dc3545;
 }
+button.sub{
+	color: #532327;
+	
+}
 .btn-icon{
 	border: #dc3545 3px solid;
-	border-radius: 100%;
-	padding: 8px;
+	border-radius: 5px;
+	padding: 5px;
 	color: #dc3545;
 }
 .btn-icon:hover{
@@ -109,7 +203,21 @@ button .btn-icon .fa-brands .fa-linkedin-in{
 	color: #d4bfc1;
 }
 
+
+.img-perfil{
+	border: 25px solid white;
+	border-radius: 100%;
+	box-shadow: #ce6464d0 0px 20px 20px;
+}
+
+
 /* Estilização footer */
+footer a{
+	color:#ac5353;
+}
+footer a:hover, a:visited{
+	color:#532327;
+}
 .icon{
 	width: 30px;
 	height: 30px;
@@ -118,16 +226,40 @@ button .btn-icon .fa-brands .fa-linkedin-in{
 .footer-icon-animation{
 	color: #d4bfc1;
 	transform: translateY(0px);
-	animation: footer-icon 2s ease-in-out infinite;
+	animation: footer-icon 3s ease-in-out infinite;
 }
 @keyframes footer-icon{
 	0% {
 		transform: translateY(0px);
 	}
 	50% {
-		transform: translateY(-5px);
+		transform: translateY(-1px);
 	}
 	100%{
 		transform: translateY(0px);
 	}
 }
+
+
+#modal{
+	position: fixed;
+	top: 0;bottom: 0;left: 0;right: 0;
+	background-color: rgba(34, 12, 14, 0.856);
+	align-items: center;
+	display: none;
+}
+
+.container-popup{
+	border: 10px solid #dc3545;
+	border-radius: 15px;
+	width: 400px;
+	height: 275px;
+	display: flex;
+	justify-content: center;
+	box-shadow: inset 0 0 8rem rgb(197, 141, 141);
+	background-image: url(../img/Union.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	align-items: center;
+}
+

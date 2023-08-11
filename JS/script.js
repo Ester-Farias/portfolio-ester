@@ -46,3 +46,15 @@ window.addEventListener("scroll", animeScroll);
 
 // Validação Formulário 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
+
+
+// Modal
+
+const modal = document.getElementById('modal');
+
+function openModal(){
+    modal.style.display = "flex";
+}
+function closeModal(){
+    modal.style.display = "none";
+}
