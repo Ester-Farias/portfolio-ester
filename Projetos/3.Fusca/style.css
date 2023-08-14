@@ -1,0 +1,55 @@
+header{
+    height: 100vh;
+    background-image: url(img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav{
+    background-color: rgba(0, 0, 0, 0.432);
+}
+#pq-comprar{
+    height: 100vh;
+    background-color: antiquewhite;
+    color: #521F03;
+}
+.container-pq-comprar{
+    display: flex;
+    padding:7% 0px;
+}
+#pq-comprar button{
+    background-color: #BD4400;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: aliceblue;
+}
+#pq-ser-seu{
+    position: relative;
+    height: 100vh;
+    background-color: #2F2929;
+    color: #521F03;
+}
+.content-foto-outside{
+    margin: 20px;
+    background-color: #BD4400;
+}
+.titulo-fundo{
+    color: antiquewhite;
+    font-size: 250px;
+    font-weight: 700;
+    letter-spacing: 15px;
+    position:absolute;
+    top: 50%;
+}
+#video{
+    background-color:#BD4400 ;
+    height: 100vh;
+    color:antiquewhite;
+}
+#fotos{
+    background-color: #521F03;
+    height: 100vh;
+}
+.text-justify{
+    text-align: justify;
+}
